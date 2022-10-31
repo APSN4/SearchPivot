@@ -2,6 +2,8 @@ array = [1,3,4,2,2]
 Debug = False
 
 def SearchPivotIndex():
+	array.insert(0, 0)
+	array.insert(len(array), 0)
 	for pivot_number in range(len(array)):
 		if pivot_number != 0:
 			later_sum = 0
@@ -14,6 +16,8 @@ def SearchPivotIndex():
 				after_sum += array[after_check]
 
 			if Debug == True: print("after:" + str(after_sum))
-			if later_sum == after_sum: return pivot_number
+			if later_sum == after_sum: return pivot_number - 1
+	return -1
+
 
 print(SearchPivotIndex())
