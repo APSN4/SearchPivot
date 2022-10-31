@@ -1,4 +1,4 @@
-#array = [1,3,4,2,2]
+array = [1,3,4,2,2]
 Debug = False
 
 def SearchPivotIndex():
